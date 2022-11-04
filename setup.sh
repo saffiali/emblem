@@ -27,10 +27,6 @@ trap '_error_report $LINENO' ERR
 #   STAGE_PROJECT           GCP Project ID of the staging project
 #   OPS_PROJECT             GCP Project ID of the operations project
 #   SKIP_TERRAFORM          If set, don't set up infrastructure
-
-export PROD_PROJECT=emblem-prod-367610
-export STAGE_PROJECT=emblem-stage-367610
-export OPS_PROJECT=	emblem-ops-367610
 #   SKIP_TRIGGERS           If set, don't set up build triggers
 #   SKIP_AUTH               If set, do not prompt to set up auth
 #   SKIP_BUILD              If set, do not build container images
@@ -40,6 +36,11 @@ export OPS_PROJECT=	emblem-ops-367610
 #   REGION                  Default region to deploy resources to. Defaults to 'us-central1'
 
 # Default to empty or default values, avoiding unbound variable errors.
+
+export PROD_PROJECT=emblem-prod-367610
+export STAGE_PROJECT=emblem-stage-367610
+export OPS_PROJECT=	emblem-ops-367610
+
 SKIP_TERRAFORM=${SKIP_TERRAFORM:-}
 SKIP_TRIGGERS=${SKIP_TRIGGERS:-}
 SKIP_AUTH=${SKIP_AUTH:=true}
