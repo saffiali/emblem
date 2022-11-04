@@ -36,11 +36,6 @@ trap '_error_report $LINENO' ERR
 #   REGION                  Default region to deploy resources to. Defaults to 'us-central1'
 
 # Default to empty or default values, avoiding unbound variable errors.
-
-export PROD_PROJECT=emblem-prod-367610
-export STAGE_PROJECT=emblem-stage-367610
-export OPS_PROJECT=	emblem-ops-367610
-
 SKIP_TERRAFORM=${SKIP_TERRAFORM:-}
 SKIP_TRIGGERS=${SKIP_TRIGGERS:-}
 SKIP_AUTH=${SKIP_AUTH:=true}
